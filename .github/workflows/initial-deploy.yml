@@ -1,0 +1,47 @@
+name: Initial TYR Site Bootstrap
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  expand-site:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Expand verified website archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f .bootstrap/site.zip
+          rm -rf .bootstrap/extracted
+          mkdir -p .bootstrap/extracted
+          unzip -q .bootstrap/site.zip -d .bootstrap/extracted
+          rsync -a --delete             --exclude '.git/'             --exclude '.github/'             --exclude '.bootstrap/'             .bootstrap/extracted/ ./
+          rm -rf .bootstrap
+          rm -f .github/workflows/initial-deploy.yml
+          rmdir .github/workflows 2>/dev/null || true
+          rmdir .github 2>/dev/null || true
+
+      - name: Commit expanded site and retire bootstrap
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Deploy initial Trevor Young Reporting website"
+          git push
