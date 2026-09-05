@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thetrevoryoung.github.io/trevor-young-reporting/sitemap.xml
