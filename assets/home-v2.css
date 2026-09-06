@@ -1,0 +1,116 @@
+/* Trevor Young Reporting — visual-first homepage layer
+   Direction: immersive field reporting, photography first, editorial typography.
+   This file is intentionally scoped to body.home-v2 so internal pages keep their existing styles. */
+
+.home-v2{background:#f2efe7;color:#111;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.home-v2 .site-header{position:absolute;top:0;left:0;right:0;z-index:80;background:linear-gradient(180deg,rgba(0,0,0,.62),transparent);border:0;backdrop-filter:none}
+.home-v2 .header-inner{max-width:1440px;padding:1.15rem 1.5rem}
+.home-v2 .brand{color:#fff;text-transform:uppercase;letter-spacing:.02em;font-size:.9rem}
+.home-v2 .brand-mark{border:1px solid rgba(255,255,255,.65);background:rgba(0,0,0,.22);box-shadow:none;border-radius:0;color:#fff}
+.home-v2 .nav a{color:#fff;text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;font-weight:800}
+.home-v2 .nav a:hover{color:#fff;text-decoration:underline}
+.home-v2 .menu-toggle{color:#fff;border-color:rgba(255,255,255,.55);background:rgba(0,0,0,.28);border-radius:0;text-transform:uppercase;font-size:.72rem;letter-spacing:.08em}
+.home-v2 main{min-height:70vh}
+.home-v2 h1,.home-v2 h2,.home-v2 h3{color:inherit}
+.home-v2 .field-wrap{width:min(1380px,calc(100% - 3rem));margin-inline:auto}
+
+.field-hero{position:relative;min-height:760px;height:100svh;max-height:980px;display:flex;align-items:flex-end;overflow:hidden;background:#111;color:#fff}
+.field-hero-media{position:absolute;inset:0;background-image:url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Bunce%20Island%20Beach.jpg');background-size:cover;background-position:center 48%;transform:scale(1.015)}
+.field-hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.22) 12%,rgba(0,0,0,.12) 42%,rgba(0,0,0,.82) 100%),linear-gradient(90deg,rgba(0,0,0,.44),transparent 70%)}
+.field-hero-content{position:relative;z-index:2;width:min(1380px,calc(100% - 3rem));margin:0 auto 7.5rem}
+.field-kicker{margin-bottom:1.05rem;font-size:.72rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.field-hero h1{max-width:9.5ch;margin:0;font-size:clamp(4.1rem,10.2vw,10rem);line-height:.82;letter-spacing:-.075em;font-weight:900;text-wrap:balance}
+.field-hero-content>p{max-width:760px;margin:1.6rem 0 0;font-size:clamp(1.05rem,1.7vw,1.45rem);line-height:1.38;color:rgba(255,255,255,.9);font-weight:500}
+.field-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:2rem}
+.field-btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.78rem 1rem;border:1px solid #fff;text-decoration:none;text-transform:uppercase;font-size:.73rem;letter-spacing:.11em;font-weight:900;transition:background .18s ease,color .18s ease}
+.field-btn-light{background:#fff;color:#111}.field-btn-light:hover{background:#e6ff3f;color:#111;border-color:#e6ff3f}
+.field-btn-line{background:transparent;color:#fff}.field-btn-line:hover{background:#fff;color:#111}
+.field-hero-caption{position:absolute;z-index:3;left:1.5rem;right:1.5rem;bottom:1.2rem;display:flex;justify-content:space-between;gap:1rem;padding-top:.75rem;border-top:1px solid rgba(255,255,255,.42);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.76)}
+
+.ticker{overflow:hidden;background:#e6ff3f;color:#0a0a0a;border-bottom:1px solid #111;padding:.7rem 0;white-space:nowrap}
+.ticker>div{display:inline-block;min-width:100%;font-size:.72rem;font-weight:950;letter-spacing:.14em;text-transform:uppercase;word-spacing:.7rem;animation:tyrTicker 32s linear infinite}
+@keyframes tyrTicker{from{transform:translateX(0)}to{transform:translateX(-25%)}}
+
+.field-intro{padding:8rem 0 8.5rem;background:#f2efe7;border-bottom:1px solid #161616}
+.intro-grid{display:grid;grid-template-columns:180px minmax(0,1fr);gap:3rem}
+.field-label{display:block;font-size:.68rem;font-weight:950;letter-spacing:.15em;text-transform:uppercase;color:#111}
+.field-label.inverted{color:#e6ff3f}
+.field-intro h2{max-width:16ch;font-size:clamp(3.2rem,7vw,7rem);line-height:.91;letter-spacing:-.065em;font-weight:900}
+.intro-copy{max-width:850px;margin:2rem 0 0;font-size:clamp(1.15rem,2vw,1.55rem);line-height:1.46;color:#252525}
+
+.visual-stories{padding:7rem 0 8rem;background:#fff;color:#111}
+.visual-head{display:flex;justify-content:space-between;gap:2rem;align-items:flex-end;margin-bottom:2.2rem}
+.visual-head h2{max-width:15ch;margin:.6rem 0 0;font-size:clamp(2.9rem,5.8vw,6.4rem);line-height:.9;letter-spacing:-.06em;font-weight:900}
+.arrow-link{display:inline-block;color:inherit;text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:.2rem;font-size:.78rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}
+.arrow-link:hover{background:#e6ff3f;color:#111}
+.story-mosaic{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:370px 370px;gap:1rem}
+.visual-card{position:relative;display:flex;align-items:flex-end;overflow:hidden;min-height:300px;background-size:cover;background-position:center;color:#fff;text-decoration:none;isolation:isolate}
+.visual-card::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.2,.7,.2,1);z-index:-2}
+.visual-card:hover::before{transform:scale(1.035)}
+.visual-card-large{grid-row:1 / span 2}
+.visual-card.bunce::before{background-image:url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Bunce%20Island%20Beach.jpg')}
+.visual-card.freetown::before{background-image:url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Freetownstreet.jpg');background-position:center}
+.visual-card.coast::before{background-image:url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Beach%20in%20Freetown%2C%20Sierra%20Leone%20%2814176784751%29.jpg');background-position:center}
+.visual-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.8) 100%);z-index:-1}
+.visual-copy{display:block;padding:2rem;width:100%}
+.visual-copy small{display:block;margin-bottom:.65rem;font-size:.66rem;font-style:normal;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:#e6ff3f}
+.visual-copy strong{display:block;max-width:14ch;font-size:clamp(2rem,4vw,4.8rem);line-height:.92;letter-spacing:-.05em}
+.visual-card:not(.visual-card-large) .visual-copy strong{font-size:clamp(1.8rem,2.8vw,3rem)}
+.visual-copy em{display:block;max-width:58ch;margin-top:.7rem;font-size:.9rem;line-height:1.45;font-style:normal;color:rgba(255,255,255,.82)}
+
+.black-manifesto{padding:7.5rem 0;background:#0b0b0b;color:#fff}
+.manifesto-grid{display:grid;grid-template-columns:180px minmax(0,1fr);gap:3rem}
+.manifesto-steps{border-top:1px solid #555}
+.manifesto-steps>div{display:grid;grid-template-columns:80px minmax(180px,.8fr) minmax(220px,1fr);gap:1.5rem;align-items:baseline;padding:1.4rem 0;border-bottom:1px solid #444}
+.manifesto-steps span{font-size:.68rem;color:#e6ff3f;font-weight:900}
+.manifesto-steps strong{font-size:clamp(2.1rem,4vw,4.5rem);line-height:1;letter-spacing:-.05em}
+.manifesto-steps p{margin:0;color:#bbb;font-size:1rem}
+
+.not-travel{display:grid;grid-template-columns:1.05fr .95fr;min-height:760px;background:#e7e0d2;color:#111}
+.not-travel-image{min-height:620px;background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.18)),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Beach%20in%20Freetown%2C%20Sierra%20Leone%20%2814176784751%29.jpg');background-size:cover;background-position:center}
+.not-travel-copy{display:flex;flex-direction:column;justify-content:center;padding:6vw}
+.not-travel-copy h2{max-width:12ch;margin:.8rem 0 1.7rem;font-size:clamp(3rem,5.4vw,6rem);line-height:.9;letter-spacing:-.06em;font-weight:900}
+.not-travel-copy p{max-width:610px;margin:0 0 2rem;font-size:1.12rem;line-height:1.55;color:#292929}
+.not-travel-copy .arrow-link{align-self:flex-start}
+
+.series-strip{padding:7.5rem 0;background:#f2efe7;color:#111}
+.series-lines{margin-top:2rem;border-top:1px solid #111}
+.series-lines a{display:grid;grid-template-columns:70px 1fr 1.4fr 28px;gap:1rem;align-items:center;padding:1.45rem 0;border-bottom:1px solid #111;color:#111;text-decoration:none;transition:padding .18s ease,background .18s ease}
+.series-lines a:hover{padding-left:.8rem;padding-right:.8rem;background:#e6ff3f}
+.series-lines span{font-size:.67rem;font-weight:900}.series-lines strong{font-size:clamp(1.25rem,2vw,2rem);letter-spacing:-.03em}.series-lines em{font-style:normal;color:#555}.series-lines b{font-size:1.2rem}
+
+.field-newsletter{padding:7rem 0;background:#111;color:#fff}
+.newsletter-grid{display:grid;grid-template-columns:180px minmax(0,1fr);gap:3rem}
+.field-newsletter h2{max-width:14ch;margin:0;font-size:clamp(3rem,6vw,6.6rem);line-height:.9;letter-spacing:-.065em;font-weight:900}
+.field-newsletter p{max-width:650px;margin:1.5rem 0 2rem;color:#bdbdbd;font-size:1.08rem}
+
+.home-v2 footer{background:#0b0b0b;color:#fff;border-top:1px solid #333}
+.home-v2 footer p,.home-v2 .footer-bottom{color:#aaa}
+.home-v2 .footer-nav a{color:#fff}
+.photo-credit{margin-top:2.2rem;padding-top:1rem;border-top:1px solid #333;color:#8e8e8e;font-size:.72rem;line-height:1.5;max-width:900px}
+
+@media (max-width:900px){
+  .home-v2 .site-header{position:absolute}.home-v2 .nav{background:#0b0b0b;border-bottom:1px solid #333}.home-v2 .nav a{color:#fff}
+  .field-hero{height:90svh;min-height:680px}.field-hero-content{margin-bottom:6.5rem}.field-hero h1{font-size:clamp(4rem,15vw,7.2rem)}
+  .intro-grid,.manifesto-grid,.newsletter-grid{grid-template-columns:1fr;gap:1.5rem}
+  .story-mosaic{grid-template-columns:1fr;grid-template-rows:auto}.visual-card-large{grid-row:auto}.visual-card{min-height:520px}.visual-card:not(.visual-card-large){min-height:420px}
+  .manifesto-steps>div{grid-template-columns:55px 1fr}.manifesto-steps p{grid-column:2}
+  .not-travel{grid-template-columns:1fr}.not-travel-copy{padding:5rem 1.5rem 6rem}
+  .series-lines a{grid-template-columns:45px 1fr 24px}.series-lines em{grid-column:2}.series-lines b{grid-column:3;grid-row:1 / span 2}
+}
+
+@media (max-width:560px){
+  .home-v2 .header-inner{padding:.9rem 1rem}.home-v2 .brand-name{font-size:.8rem}
+  .home-v2 .field-wrap,.field-hero-content{width:min(100% - 2rem,1380px)}
+  .field-hero{min-height:650px;height:88svh}.field-hero-media{background-position:58% center}.field-hero-content{margin-bottom:6.2rem}.field-hero h1{font-size:clamp(3.5rem,16.2vw,5.6rem);line-height:.84}.field-hero-content>p{font-size:1rem;max-width:34ch}.field-actions{display:grid}.field-btn{width:100%}
+  .field-hero-caption{left:1rem;right:1rem;bottom:1rem;display:block}.field-hero-caption span{display:block}.field-hero-caption span+span{margin-top:.25rem}
+  .ticker>div{font-size:.64rem}
+  .field-intro,.visual-stories,.black-manifesto,.series-strip,.field-newsletter{padding:5rem 0}
+  .field-intro h2,.visual-head h2,.not-travel-copy h2,.field-newsletter h2{font-size:clamp(2.8rem,13vw,4.5rem)}
+  .visual-head{display:block}.visual-head .arrow-link{margin-top:1.2rem}
+  .visual-card,.visual-card:not(.visual-card-large){min-height:420px}.visual-copy{padding:1.35rem}.visual-copy strong,.visual-card:not(.visual-card-large) .visual-copy strong{font-size:2.25rem}
+  .not-travel-image{min-height:500px}
+  .series-lines a{padding:1.2rem 0}.series-lines strong{font-size:1.3rem}.series-lines em{font-size:.86rem}
+}
+
+@media (prefers-reduced-motion:reduce){.ticker>div{animation:none}.visual-card::before{transition:none}}
