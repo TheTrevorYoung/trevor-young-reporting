@@ -39,6 +39,20 @@ The HTML canonical link uses the current page URL at runtime, so normal page can
 - No unverified social handles
 - Newsletter and public contact collection remain disabled until real destinations exist
 - Cross-brand institutional claims remain subject to the TYR publication gate
+- Use meaningful transparency, not indiscriminate disclosure; protect sensitive family, financial, location, account and private-message details unless there is a clear editorial reason to publish them
+
+## Editorial publishing standard
+Published TYR stories should preserve a visible audit trail appropriate to the piece:
+- Published date
+- Updated date when a material change is made
+- Series and topics
+- Sources & notes when evidence, methodology or context matters
+- Disclosure when Trevor has a relevant affiliation or commercial interest
+- Correction note for material corrections
+
+Field and documentary stories may use the reusable modules in `assets/editorial.css` for story metadata, update notes, photo essays, captions, embedded video and source/context notes. Add real media only when the story has real media; do not create empty visual modules for appearance.
+
+The newsletter launches as one TYR list. Separate interest tracks should be introduced only if real reader behavior later shows they are useful.
 
 ## Key files
 - `index.html` — homepage
@@ -52,15 +66,19 @@ The HTML canonical link uses the current page URL at runtime, so normal page can
 - `privacy/`
 - `contact/`
 - `assets/styles.css`
+- `assets/editorial.css` — story audit-trail and documentary media modules
 - `assets/app.js`
 - `sitemap.xml`
 - `robots.txt`
 
 ## Brand tokens
-- Ink `#111111`
-- Paper/Bone `#F5F2EB`
+- Ink `#17324A`
+- Paper `#F7F4ED`
 - White `#FFFFFF`
-- Signal Red `#C9362B`
-- Slate `#6B7280`
+- Signal Blue `#4F7DA8`
+- Teal `#6FA7A2`
+- Sage `#A8BFA8`
+- Floral `#C9A3B1`
+- Slate `#647789`
 
-Signal Red is an accent, not a permanent breaking-news treatment.
+The palette supports the documentary life-in-motion direction without turning the site into a breaking-news interface.
