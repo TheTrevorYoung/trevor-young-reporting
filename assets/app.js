@@ -1,7 +1,25 @@
-
 (() => {
-  const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
+  const onGitHubPages = window.location.hostname.endsWith('github.io');
+  const root = onGitHubPages ? '/trevor-young-reporting/' : '/';
+
+  if (nav) {
+    const links = [
+      ['life/', 'Life & Places'],
+      ['experiments/', 'My Experiments'],
+      ['projects/', 'My Projects'],
+      ['trading-with-ai/', 'Trading with AI'],
+      ['published-work/', 'Published Work']
+    ];
+    const currentPath = window.location.pathname;
+    nav.innerHTML = links.map(([path, label]) => {
+      const href = root + path;
+      const active = currentPath.includes('/' + path) || currentPath.endsWith('/' + path);
+      return `<a href="${href}"${active ? ' aria-current="page"' : ''}>${label}</a>`;
+    }).join('');
+  }
+
+  const toggle = document.querySelector('.menu-toggle');
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
